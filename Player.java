@@ -17,10 +17,10 @@ public class Player implements Runnable{
                     isOver = true; 
                     isRunning = false; 
                     if(r == 75){
-                        throw new GameOverException("Forbidden number!");
+                        throw new GameOverException("Forbidden number! " + Thread.currentThread().getName() + " loses!");
                     }
                     else{
-                        throw new GameOverException("Winner!");
+                        throw new GameOverException("Winner! "  + Thread.currentThread().getName());
                     }
                    
                 } catch (GameOverException e) {
